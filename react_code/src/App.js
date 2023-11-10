@@ -17,7 +17,6 @@ const MapComponent = () => {
   }, []);
 
   const handleCitySelection = (city) => {
-    // Toggle city selection
     setSelectedCities(prevCities => {
       if (prevCities.includes(city)) {
         return prevCities.filter(selectedCity => selectedCity !== city);
@@ -53,8 +52,7 @@ const MapComponent = () => {
     .then(data => console.log(data))
     .catch(error => console.error('Error sending shortest path:', error));
 
-   // const shortestPath = paths[0];
-    setPaths(paths); // Highlight the shortest path
+    setPaths(paths);
   };
 
   return (
